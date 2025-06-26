@@ -258,3 +258,73 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const botao = document.getElementById('btn-sortear');
+  const resultado = document.getElementById('resultado');
+
+  const pratos = [
+    {
+      nome: "Cuscuz de carne seca",
+      descricao: "Massa leve de milho com recheio suculento de carne seca",
+      preco: 10.00,
+      imagem: "../img/cuzcuzdeCarne.png"
+    },
+    {
+      nome: "Pão com ovos e manteiga",
+      descricao: "Tradicional, saboroso e preparado na hora",
+      preco: 6.00,
+      imagem: "../img/paocomovo.png"
+    },
+    {
+      nome: "Bolo de Ninho",
+      descricao: "Doce artesanal com leite ninho e cobertura especial",
+      preco: 12.00,
+      imagem: "../img/Bolo.png"
+    },
+    {
+      nome: "Combo Natural",
+      descricao: "Salada de frutas, sanduíche natural e suco",
+      preco: 22.00,
+      imagem: "../img/sucoesanduichenatu.png"
+    },
+    {
+      nome: "Tapioca de Frango",
+      descricao: "Tapioca recheada com frango desfiado e queijo",
+      preco: 15.00,
+      imagem: "../img/tapiocaFrango.png"
+    },
+    {
+      nome: "Bife de carne acebolado",
+      descricao: "Bife grelhado com cebolas caramelizadas",
+      preco: 18.00,
+      imagem: "../img/bifeacebolado.png"
+    }
+  ];
+
+  botao.addEventListener('click', () => {
+    const escolhido = pratos[Math.floor(Math.random() * pratos.length)];
+
+    resultado.innerHTML = `
+      <div class="card" style="flex-direction: column; text-align: center">
+        <img src="${escolhido.imagem}" alt="${escolhido.nome}" style="width:200px; border-radius:12px">
+        <h2>${escolhido.nome}</h2>
+        <p>${escolhido.descricao}</p>
+        <p class="preco">R$ ${escolhido.preco.toFixed(2)}</p>
+        <button class="btn btn-primary" onclick='adicionarSurpresa(${JSON.stringify(escolhido)})'>Adicionar ao Carrinho</button>
+      </div>
+    `;
+  });
+});
+
+function adicionarSurpresa(prato) {
+  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  const item = {
+    tipo: "Surpresa",
+    descricao: prato.nome,
+    preco: prato.preco.toFixed(2)
+  };
+  carrinho.push(item);
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  alert("Prato surpresa adicionado ao carrinho!");
+  window.location.href = 'carrinho.html';
+}

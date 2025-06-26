@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surpreenda-me | Pimenta Café</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="logo">
+      <a href="index.html"><img src="../img/logo.png" alt="Pimenta Café"></a>
+    </div>
+    <div class="cart-icon">
+      <a href="carrinho.html">🛒</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Surpreenda-me!</h1>
+    <p class="subtitle">Clique no botão abaixo e descubra qual delícia vamos escolher para você!</p>
+
+    <div style="text-align:center">
+      <button class="btn btn-primary" id="btn-sortear">Surpreenda-me agora</button>
+    </div>
+
+    <div id="resultado" style="margin-top: 2rem; text-align:center;"></div>
+  </main>
+
+  <footer>
+    <p>PimentaCafé &copy; 2025</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/surpreenda.js"></script>
+</body>
+</html>
