@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardápio | Pimenta Café</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="logo">
+      <a href="/index.html"><img src="../img/logo.png" alt="Pimenta Café" /></a>
+    </div>
+    <div class="cart-icon">
+      <a href="/screens/carrinho.html">🛒</a>
+    </div>
+  </header>
+
+  <nav class="tab-menu">
+    <div>Novidades</div>
+    <div>Mais Pedidos</div>
+    <div>Doces e Sobremesas</div>
+    <div>Combos</div>
+    <div>Promos do dia</div>
+    <div>Proteínas do almoço</div>
+  </nav>
+
+  <main class="container cardapio-container">
+    <section>
+      <h2>Mais Pedidos</h2>
+      <div class="card" onclick="verDetalhes('Cuscuz de carne seca', 'Um saboroso cuzcuz de carne', 10.00, '../img/cuzcuzdeCarne.png')">
+        <img src="../img/cuzcuzdeCarne.png" alt="Cuscuz de carne seca" />
+        <div>
+          <strong>Cuscuz de carne seca</strong><br />R$ 10,00
+        </div>
+      </div>
+      <div class="card" onclick="verDetalhes('Pão com ovos e manteiga', 'Pão na chapa com manteiga e com 2 ovos fritos', 6.00, '../img/paocomovo.png')">
+        <img src="../img/paocomovo.png" alt="Pão com ovos e manteiga" />
+        <div>
+          <strong>Pão com ovos e manteiga</strong><br />R$ 6,00
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Doces e Sobremesas</h2>
+      <div class="card" onclick="verDetalhes('Bolo de Ninho', 'Uma sobremesa recheada, Bolo de ninha', 12.00, '../img/Bolo.png')">
+        <img src="../img/Bolo.png" alt="Bolo de Ninho" />
+        <div>
+          <strong>Bolo de Ninho</strong><br />R$ 12,00
+        </div>
+      </div>
+      <div class="card" onclick="verDetalhes('Sala de Frutas', 'Banana, maça, morango e kiwi lambusados de leite moça', 12.00, '../img/saladadeFruta.png')">
+        <img src="../img/saladadeFruta.png" alt="Salada de Frutas" />
+        <div>
+          <strong>Salada de Frutas</strong><br />R$ 12,00
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Combos</h2>
+      <div class="card" onclick="verDetalhes('Pão de queijo + Toddynho', 'Pão de queijo da casa com uma caixinha de toddynho', 7.00, '../img/paodequeijo.png')">
+        <div>
+          <strong>Combo pão de queijo + toddynho</strong><br />R$ 7,00
+        </div>
+      </div>
+      <div class="card" onclick="verDetalhes('Sanduíche natural + Suco + Salada de frutas', 'Sanduíche natural com a nossa deliciosa salada de frutas acompanhada de um maravilhoso suco de laranja', 22.00, '../img/paodequeijo.png')">
+        <img src="../img/sucoesanduichenatu.png" alt="Combo natural" />
+        <div>
+          <strong>Salada + Sanduíche + Suco</strong><br />R$ 22,00
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Promos do Dia</h2>
+      <div class="card" onclick="verDetalhes('Sanduíche natural + Suco + Salada de frutas', 'Sanduíche natural com a nossa deliciosa salada de frutas acompanhada de um maravilhoso suco de laranja', 22.00, '../img/paodequeijo.png')">
+        <img src="../img/paocomovo.png" alt="Promo pão com ovo" />
+        <div>
+          <strong>Pão com ovos e manteiga</strong><br />R$ 6,00
+        </div>
+      </div>
+      <div class="card" onclick="verDetalhes('Tapioca de frango completa', 'Tapioca de frnago completa', 15.00, '../img/tapiocaFrango.png')">
+        <img src="../img/tapiocaFrango.png" alt="Tapioca" />
+        <div>
+          <strong>Tapioca de frango completa</strong><br />R$ 15,00
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Proteínas do Almoço</h2>
+      <div class="card" onclick="verDetalhes('Bife de carne acebolado', 'Bife de carne acebolado', 22.00, '../img/bifeacebolado.pngg')">
+        <img src="../img/bifeacebolado.png" alt="Bife acebolado" />
+        <div>
+          <strong>Bife de carne acebolado</strong>
+        </div>
+      </div>
+      <div class="card" onclick="verDetalhes('Bife de frango parmegiana', 'Bife de frango parmegiana', 22.00, '../img/parmediana.png')">
+        <img src="../img/parmediana.png" alt="Frango parmegiana" />
+        <div>
+          <strong>Bife de frango parmegiana</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>PimentaCafé &copy; 2025</p>
+  </footer>
+
+  <div class="side-menu" id="sideMenu">
+        <nav>
+            <a href="/screens/conta.html">Conta</a>
+            <a href="/screens/carteira.html">Carteira</a>
+            <a href="/screens/carrinho.html">Carrinho</a>
+            <a href="#">Surpreenda-me</a>
+            <a href="/screens/cardapio.html">Cardápio</a>
+            <a href="/screens/almoco.html">Almoço</a>
+            <a href="/screens/macarrao.html">Macarrão</a>
+                <a href="/screens/historico.html">Histórico de Pedidos</a>
+            </nav>
+        <div class="close-btn" onclick="toggleMenu()">&#10005;</div>
+    </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Pimenta Café</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="../img/logo.png" alt="Pimenta Café" height="50" />
+    </div>
+  </header>
+
+  <main class="container login-container">
+    <div class="login-box">
+      <h1>Entrar na conta</h1>
+      <form id="login-form">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox" id="keep-logged" /> Manter conectado</label>
+          <a href="esqueci.html">Esqueci minha senha</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Entrar</button>
+        <button type="button" class="btn btn-outline" onclick="window.location.href='cadastro.html'">Cadastre-se</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>PimentaCafé &copy; 2025</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+/* ===============================
+   VARIÁVEIS BÁSICAS E RESET
+================================*/
+:root {
+  --cor-primaria: #d1402b;
+  --cor-secundaria: #f27676;
+  --cor-fundo: #fdfdfd;
+  --cor-texto: #333;
+  --cor-cinza: #888;
+  --cor-borda: #ddd;
+  --cor-receita: #4caf50;
+  --cor-despesa: #f44336;
+  --cor-lucro: #2196f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ===============================
+   ESTRUTURA BÁSICA
+================================*/
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  color: var(--cor-primaria);
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--cor-cinza);
+  background: #f8f8f8;
+  margin-top: auto;
+}
+
+
+/* ===============================
+   HEADER E NAVEGAÇÃO
+================================*/
+.header, .chatheader {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menu-icon, .cart-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.tab-menu {
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.tab-menu div {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cor-secundaria);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-menu nav a {
+  display: block;
+  padding: 12px 0;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.close-btn {
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+
+/* ===============================
+   COMPONENTES REUTILIZÁVEIS
+================================*/
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--cor-primaria);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--cor-primaria);
+  color: var(--cor-primaria);
+}
+
+.btn-outline:hover {
+  background: var(--cor-primaria);
+  color: white;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  background-color: var(--cor-secundaria);
+  color: white;
+  border: none;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 0.6rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* ===============================
+   ESPECÍFICO: LOGIN & CADASTRO
+================================*/
+.login-container, .cadastro-container, .recuperar-container {
+  max-width: 400px;
+  padding-top: 2rem;
+}
+
+.login-box, .form-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  align-items: center;
+}
+
+/* ===============================
+   COMPONENTES DE CONTEÚDO
+================================*/
+.card {
+  background: #fff;
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+}
+
+.preco {
+  color: var(--cor-primaria);
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.pedido {
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  margin-bottom: 1rem;
+}
+
+.pedido-info h2 {
+  margin-bottom: 0.5rem;
+}
+
+.receita {
+  background-color: var(--cor-receita);
+  color: white;
+}
+
+.despesa {
+  background-color: var(--cor-despesa);
+  color: white;
+}
+
+.lucro {
+  background-color: var(--cor-lucro);
+  color: white;
+}
+
+.positivo {
+  color: var(--cor-receita);
+  font-weight: bold;
+}
+
+.negativo {
+  color: var(--cor-despesa);
+  font-weight: bold;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ===============================
+   CHAT
+================================*/
+.chatbody {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chat-box {
+  flex: 1;
+  min-height: 300px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+
+.msg {
+  max-width: 80%;
+  padding: 0.6rem 1rem;
+  border-radius: 16px;
+  position: relative;
+}
+
+.sent {
+  align-self: flex-end;
+  background-color: var(--cor-primaria);
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.received {
+  align-self: flex-start;
+  background-color: #eee;
+  border-bottom-left-radius: 0;
+}
+
+.time {
+  font-size: 0.7rem;
+  color: var(--cor-cinza);
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  padding: 0.7rem 1.2rem;
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* =============================
+   Estilo específico para tela "Monte seu Macarrão"
+============================= */
+
+.macarrao-img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: var(--cor-primaria);
+}
+
+.bloco {
+  background: #fff;
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.bloco h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--cor-primaria);
+}
+
+.obrigatorio {
+  color: var(--cor-despesa);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.opcional {
+  color: var(--cor-cinza);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.input-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 2rem;
+}

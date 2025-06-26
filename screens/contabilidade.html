@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contabilidade | Pimenta Café</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="logo">
+      <a href="/index.html"><img src="../img/logo.png" alt="Pimenta Café" /></a>
+    </div>
+    <div class="cart-icon">
+      <a href="/screens/carrinho.html">🛒</a>
+    </div>
+  </header>
+
+  <main class="container contabilidade-container">
+    <h1>Resumo Contábil</h1>
+
+    <div class="resumo">
+      <div class="box receita">
+        <h2>Receita</h2>
+        <p>R$ 12.500,00</p>
+      </div>
+      <div class="box despesa">
+        <h2>Despesas</h2>
+        <p>R$ 4.700,00</p>
+      </div>
+      <div class="box lucro">
+        <h2>Lucro</h2>
+        <p>R$ 7.800,00</p>
+      </div>
+    </div>
+
+    <section class="tabela">
+      <h2>Transações Recentes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>Tipo</th>
+            <th>Valor (R$)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>25/06/2025</td>
+            <td>Venda - Pedido #1250</td>
+            <td class="positivo">Receita</td>
+            <td>150,00</td>
+          </tr>
+          <tr>
+            <td>24/06/2025</td>
+            <td>Compra de insumos</td>
+            <td class="negativo">Despesa</td>
+            <td>300,00</td>
+          </tr>
+          <tr>
+            <td>23/06/2025</td>
+            <td>Venda - Pedido #1249</td>
+            <td class="positivo">Receita</td>
+            <td>200,00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>PimentaCafé &copy; 2025</p>
+  </footer>
+  <div class="side-menu" id="sideMenu">
+        <nav>
+            <a href="/screens/conta.html">Conta</a>
+            <a href="/screens/carteira.html">Carteira</a>
+            <a href="/screens/carrinho.html">Carrinho</a>
+            <a href="#">Surpreenda-me</a>
+            <a href="/screens/cardapio.html">Cardápio</a>
+            <a href="/screens/almoco.html">Almoço</a>
+            <a href="/screens/macarrao.html">Macarrão</a>
+                <a href="/screens/historico.html">Histórico de Pedidos</a>
+            </nav>
+        <div class="close-btn" onclick="toggleMenu()">&#10005;</div>
+  </div>
+  <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórico de Pedidos | Pimenta Café</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="logo">
+      <a href="/index.html"><img src="../img/logo.png" alt="Pimenta Café" /></a>
+    </div>
+    <div class="cart-icon">
+      <a href="/screens/carrinho.html">🛒</a>
+    </div>
+  </header>
+
+  <main class="container historico-container">
+    <h1>Histórico de Pedidos</h1>
+
+    <div class="pedido">
+      <div class="pedido-info">
+        <h2>Pedido #1245</h2>
+        <p><strong>Data:</strong> 20/06/2025</p>
+        <p><strong>Status:</strong> Entregue</p>
+      </div>
+      <div class="pedido-itens">
+        <p>• Cappuccino - R$ 7,50</p>
+        <p>• Croissant - R$ 5,00</p>
+        <p><strong>Total:</strong> R$ 12,50</p>
+      </div>
+    </div>
+
+    <div class="pedido">
+      <div class="pedido-info">
+        <h2>Pedido #1244</h2>
+        <p><strong>Data:</strong> 18/06/2025</p>
+        <p><strong>Status:</strong> Cancelado</p>
+      </div>
+      <div class="pedido-itens">
+        <p>• Espresso - R$ 5,00</p>
+        <p><strong>Total:</strong> R$ 5,00</p>
+      </div>
+    </div>
+
+    <div class="pedido">
+      <div class="pedido-info">
+        <h2>Pedido #1243</h2>
+        <p><strong>Data:</strong> 15/06/2025</p>
+        <p><strong>Status:</strong> Em andamento</p>
+      </div>
+      <div class="pedido-itens">
+        <p>• Latte Caramelo - R$ 9,90</p>
+        <p><strong>Total:</strong> R$ 9,90</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>PimentaCafé &copy; 2025</p>
+  </footer>
+  <div class="side-menu" id="sideMenu">
+        <nav>
+            <a href="/screens/conta.html">Conta</a>
+            <a href="/screens/carteira.html">Carteira</a>
+            <a href="/screens/carrinho.html">Carrinho</a>
+            <a href="#">Surpreenda-me</a>
+            <a href="/screens/cardapio.html">Cardápio</a>
+            <a href="/screens/almoco.html">Almoço</a>
+            <a href="/screens/macarrao.html">Macarrão</a>
+                <a href="/screens/historico.html">Histórico de Pedidos</a>
+            </nav>
+        <div class="close-btn" onclick="toggleMenu()">&#10005;</div>
+  </div>
+</body>
+</html>

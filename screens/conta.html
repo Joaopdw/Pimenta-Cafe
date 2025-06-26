@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Conta | Pimenta Café</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+      <header class="header">
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <div class="logo">
+        <a href="/index.html"><img src="../img/logo.png" alt="Pimenta Café" /></a>
+      </div>
+      <div class="cart-icon">
+        <a href="/screens/carrinho.html">🛒</a>
+      </div>
+    </header>
+
+    <main class="container conta-container">
+      <section class="perfil">
+        <img src="../img/usuario.jpg" alt="Foto de Perfil" />
+        <div class="perfil-info">
+          <h2>João da Silva</h2>
+          <p>joao@email.com</p>
+        </div>
+      </section>
+
+      <section class="info-box">
+        <h3>Informações da Conta</h3>
+        <p><strong>Telefone:</strong> (61) 99999-9999</p>
+        <p><strong>CPF:</strong> 000.000.000-00</p>
+        <p><strong>Endereço:</strong> R. das Laranjeiras, 123 - Brasília/DF</p>
+      </section>
+
+      <div class="actions">
+        <button class="btn btn-primary" id="btn-editar">Editar Dados</button>
+        <button class="btn btn-outline" id="btn-sair">Sair da Conta</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>PimentaCafé &copy; 2025</p>
+    </footer>
+    <div class="side-menu" id="sideMenu">
+          <nav>
+              <a href="/screens/conta.html">Conta</a>
+              <a href="/screens/carteira.html">Carteira</a>
+              <a href="/screens/carrinho.html">Carrinho</a>
+              <a href="#">Surpreenda-me</a>
+              <a href="/screens/cardapio.html">Cardápio</a>
+              <a href="/screens/almoco.html">Almoço</a>
+              <a href="/screens/macarrao.html">Macarrão</a>
+                  <a href="/screens/historico.html">Histórico de Pedidos</a>
+              </nav>
+          <div class="close-btn" onclick="toggleMenu()">&#10005;</div>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
