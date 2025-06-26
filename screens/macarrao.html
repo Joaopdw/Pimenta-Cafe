@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Monte seu Macarrão | Pimenta Café</title>
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/macarrao.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="logo">
+                <a href="/index.html"><img src="../img/logo.png" alt="Pimenta Café" /></a>
+            </div>
+            <div class="cart-icon">
+                <a href="carrinho.html">🛒</a>
+            </div>
+        </header>
+
+        <main class="container">
+            <h1>Monte seu Macarrão</h1>
+            <p class="subtitle">Monte seu Macarrão da forma que preferir!</p>
+            <img src="../img/macarrao.png" alt="Macarrão" class="macarrao-img" />
+
+            <form id="form-macarrao">
+                <section class="bloco">
+                    <h2>Escolha sua Massa: <span class="obrigatorio">(Obrigatório)</span></h2>
+                    <div class="input-group">
+                        <label><input type="radio" name="massa" value="Espaguete" required /> Espaguete - R$13,00</label>
+                        <label><input type="radio" name="massa" value="Penne" /> Penne - R$13,00</label>
+                    </div>
+                </section>
+
+                <section class="bloco">
+                    <h2>Escolha seu Molho: <span class="obrigatorio">(Obrigatório)</span></h2>
+                    <div class="input-group">
+                        <label><input type="radio" name="molho" value="Misto" required /> Misto - R$2,00</label>
+                        <label><input type="radio" name="molho" value="Bolonhesa" /> Bolonhesa - R$2,00</label>
+                        <label><input type="radio" name="molho" value="Branco" /> Branco - R$2,00</label>
+                        <label><input type="radio" name="molho" value="Sem Molho">Sem Molho - Grátis</label>
+                    </div>
+                </section>
+
+                <section class="bloco">
+                    <h2>Escolha seus Ingredientes: <span class="obrigatorio">(Obrigatório)</span></h2>
+                    <div class="input-group">
+                        <label><input type="checkbox" name="ingredientes" value="Milho" /> Milho - R$2,00</label>
+                        <label><input type="checkbox" name="ingredientes" value="Tomate" /> Tomate - R$2,00</label>
+                        <label><input type="checkbox" name="ingredientes" value="Cebola" /> Cebola - R$2,00</label>
+                        <label><input type="checkbox" name="ingredientes" value="Cheiro-Verde" /> Cheiro-Verde - R$2,00</label>
+                        <label><input type="checkbox" name="ingredientes" value="Frango" /> Frango - R$2,00</label>
+                        <label><input type="checkbox" name="ingredientes" value="Calabresa" /> Calabresa - R$2,00</label>
+                        <label><input type="checkbox" name="ingredientes" value="Queijo Ralado" /> Queijo Ralado - R$2,00</label>
+                    </div>
+                </section>
+
+                <section class="bloco">
+                    <h2>Escolha sua Bebida <span class="opcional">(Opcional)</span></h2>
+                    <div class="input-group">
+                        <label><input type="checkbox" name="bebidas" value="Coca Zero" /> Coca Cola Lata Zero - R$5,00</label>
+                        <label><input type="checkbox" name="bebidas" value="Coca Original" /> Coca Cola Lata Original - R$5,00</label>
+                        <label><input type="checkbox" name="bebidas" value="Limoneto" /> Limoneto - R$5,00</label>
+                        <label><input type="checkbox" name="bebidas" value="Guaraná Zero" /> Guaraná Lata Zero - R$5,00</label>
+                        <label><input type="checkbox" name="bebidas" value="Guaraná Original" /> Guaraná Lata Original - R$5,00</label>
+                        <label><input type="checkbox" name="bebidas" value="Suco Laranja" /> Suco Natural de Laranja - R$5,00</label>
+                    </div>
+                </section>
+
+                <div class="actions">
+                    <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>PimentaCafé &copy; 2025</p>
+        </footer>
+        <div class="side-menu" id="sideMenu">
+            <nav>
+                <a href="/screens/conta.html">Conta</a>
+                <a href="/screens/carteira.html">Carteira</a>
+                <a href="/screens/carrinho.html">Carrinho</a>
+                <a href="/screens/surpreenda-me.html">Surpreenda-me</a>
+                <a href="/screens/cardapio.html">Cardápio</a>
+                <a href="/screens/almoco.html">Almoço</a>
+                <a href="/screens/macarrao.html">Macarrão</a>
+                    <a href="/screens/historico.html">Histórico de Pedidos</a>
+                </nav>
+            <div class="close-btn" onclick="toggleMenu()">&#10005;</div>
+        </div>
+        <script src="../js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Almoço | Pimenta Café</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+      <header class="header">
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <div class="logo">
+        <a href="/index.html"><img src="../img/logo.png" alt="Pimenta Café" /></a>
+      </div>
+      <div class="cart-icon">
+        <a href="/screens/carrinho.html">🛒</a>
+      </div>
+    </header>
+
+    <main class="container almoco-container">
+      <h1>Pratos de Almoço</h1>
+
+      <div class="grid">
+        <div class="card">
+          <img src="../img/prato1.jpg" alt="Prato Executivo" />
+          <h3>Prato Executivo</h3>
+          <p>Arroz, feijão, carne grelhada e salada</p>
+          <span class="preco">R$ 22,90</span>
+          <button class="btn btn-primary">Adicionar</button>
+        </div>
+
+        <div class="card">
+          <img src="../img/prato2.jpg" alt="Strogonoff de Frango" />
+          <h3>Strogonoff de Frango</h3>
+          <p>Acompanha arroz branco e batata palha</p>
+          <span class="preco">R$ 24,00</span>
+          <button class="btn btn-primary">Adicionar</button>
+        </div>
+
+        <div class="card">
+          <img src="../img/prato3.jpg" alt="Feijoada Completa" />
+          <h3>Feijoada Completa</h3>
+          <p>Feijão preto, carnes, arroz, couve e farofa</p>
+          <span class="preco">R$ 29,90</span>
+          <button class="btn btn-primary">Adicionar</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>PimentaCafé &copy; 2025</p>
+    </footer>
+    <div class="side-menu" id="sideMenu">
+        <nav>
+            <a href="/screens/conta.html">Conta</a>
+            <a href="/screens/carteira.html">Carteira</a>
+            <a href="/screens/carrinho.html">Carrinho</a>
+            <a href="/screens/surpreenda-me.html">Surpreenda-me</a>
+            <a href="/screens/cardapio.html">Cardápio</a>
+            <a href="/screens/almoco.html">Almoço</a>
+            <a href="/screens/macarrao.html">Macarrão</a>
+                <a href="/screens/historico.html">Histórico de Pedidos</a>
+            </nav>
+        <div class="close-btn" onclick="toggleMenu()">&#10005;</div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
