@@ -3,7 +3,7 @@
 ================================*/
 :root {
   --cor-primaria: #d1402b;
-  --cor-secundaria: #f27676;
+  --cor-secundaria: #ec7878;
   --cor-fundo: #fdfdfd;
   --cor-texto: #333;
   --cor-cinza: #888;
@@ -88,6 +88,11 @@ footer {
   padding: 10px;
   white-space: nowrap;
   cursor: pointer;
+}
+
+.tab-menu a {
+  text-decoration: none;
+  color: #ec7878;
 }
 
 .side-menu {

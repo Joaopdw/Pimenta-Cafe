@@ -18,17 +18,17 @@
   </header>
 
   <nav class="tab-menu">
-    <div>Novidades</div>
-    <div>Mais Pedidos</div>
-    <div>Doces e Sobremesas</div>
-    <div>Combos</div>
-    <div>Promos do dia</div>
-    <div>Proteínas do almoço</div>
+    <div><a href="#">Novidades</a></div>
+    <div><a href="#maisPedidos">Mais Pedidos</a></div>
+    <div><a href="#doces">Doces e Sobremesas</a></div>
+    <div><a href="#combos">Combos</a></div>
+    <div><a href="#promos">Promos do dia</a></div>
+    <div><a href="#proteinas">Proteínas do almoço</a></div>
   </nav>
 
   <main class="container cardapio-container">
     <section>
-      <h2>Mais Pedidos</h2>
+      <h2 id="maisPedidos">Mais Pedidos</h2>
       <div class="card" onclick="verDetalhes('Cuscuz de carne seca', 'Um saboroso cuzcuz de carne', 10.00, '../img/cuzcuzdeCarne.png')">
         <img src="../img/cuzcuzdeCarne.png" alt="Cuscuz de carne seca" />
         <div>
@@ -44,7 +44,7 @@
     </section>
 
     <section>
-      <h2>Doces e Sobremesas</h2>
+      <h2 id="doces">Doces e Sobremesas</h2>
       <div class="card" onclick="verDetalhes('Bolo de Ninho', 'Uma sobremesa recheada, Bolo de ninha', 12.00, '../img/Bolo.png')">
         <img src="../img/Bolo.png" alt="Bolo de Ninho" />
         <div>
@@ -60,7 +60,7 @@
     </section>
 
     <section>
-      <h2>Combos</h2>
+      <h2 id="combos">Combos</h2>
       <div class="card" onclick="verDetalhes('Pão de queijo + Toddynho', 'Pão de queijo da casa com uma caixinha de toddynho', 7.00, '../img/paodequeijo.png')">
         <div>
           <strong>Combo pão de queijo + toddynho</strong><br />R$ 7,00
@@ -75,7 +75,7 @@
     </section>
 
     <section>
-      <h2>Promos do Dia</h2>
+      <h2 id="promos">Promos do Dia</h2>
       <div class="card" onclick="verDetalhes('Sanduíche natural + Suco + Salada de frutas', 'Sanduíche natural com a nossa deliciosa salada de frutas acompanhada de um maravilhoso suco de laranja', 22.00, '../img/paodequeijo.png')">
         <img src="../img/paocomovo.png" alt="Promo pão com ovo" />
         <div>
@@ -91,7 +91,7 @@
     </section>
 
     <section>
-      <h2>Proteínas do Almoço</h2>
+      <h2 id="proteinas">Proteínas do Almoço</h2>
       <div class="card" onclick="verDetalhes('Bife de carne acebolado', 'Bife de carne acebolado', 22.00, '../img/bifeacebolado.pngg')">
         <img src="../img/bifeacebolado.png" alt="Bife acebolado" />
         <div>
@@ -116,7 +116,7 @@
             <a href="/screens/conta.html">Conta</a>
             <a href="/screens/carteira.html">Carteira</a>
             <a href="/screens/carrinho.html">Carrinho</a>
-            <a href="screens/surpreenda-me.html">Surpreenda-me</a>
+            <a href="/screens/surpreenda-me.html">Surpreenda-me</a>
             <a href="/screens/cardapio.html">Cardápio</a>
             <a href="/screens/almoco.html">Almoço</a>
             <a href="/screens/macarrao.html">Macarrão</a>
